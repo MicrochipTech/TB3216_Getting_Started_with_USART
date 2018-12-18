@@ -1,4 +1,4 @@
-ATmega4809_USART_Examples_TB3216
+(TB3216) ATmega4809 USART Examples
 ===
 
 This repository contains examples of bare metal source code for USART as described in TB3216 document from Microchip.
@@ -6,7 +6,7 @@ The repository contains an Atmel Studio Solution with multiple projects inside. 
 1. ATmega4809 device (recommended is evaluation board ATmega4809 X-plained PRO)
 2. Atmel Studio
 3. ATmega4809 Device Packs
-4. Serial terminal emulator (eg. Data Visualizer, TeraTerm)
+4. Serial terminal emulator (eg. Data Visualizer, Tera Term)
 5. UART to USB module (eg. MCP2200)
 
 The following examples are inside this repository:
