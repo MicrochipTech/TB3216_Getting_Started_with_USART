@@ -44,6 +44,7 @@ int USART0_printChar(char character, FILE *stream)
     {
         ;
     }
+    USART0.TXDATAL = character;
     return 0; 
 }
 
