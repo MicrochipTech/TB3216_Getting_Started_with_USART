@@ -26,28 +26,13 @@
 */
 
 #define F_CPU 3333333
-#define USART0_BAUD_RATE(BAUD_RATE) ((float)(3333333 * 64 / (16 * (float)BAUD_RATE)) + 0.5)
+#define USART0_BAUD_RATE(BAUD_RATE) ((float)(F_CPU * 64 / (16 * (float)BAUD_RATE)) + 0.5)
 
 #include <avr/io.h>
 #include <util/delay.h>
 #include <stdio.h>
 
-int USART0_printChar(char character, FILE *stream);
-void USART0_sendChar(char c);
-void USART0_init(void);
-
-FILE USART_stream = FDEV_SETUP_STREAM(USART0_printChar, NULL, _FDEV_SETUP_WRITE);
-
-int USART0_printChar(char character, FILE *stream)
-{ 
-    while (!(USART0.STATUS & USART_DREIF_bm))
-    {
-        ;
-    }
-    return 0; 
-}
-
-void USART0_sendChar(char c)
+static void USART0_sendChar(char c)
 {
     while (!(USART0.STATUS & USART_DREIF_bm))
     {
@@ -56,7 +41,15 @@ void USART0_sendChar(char c)
     USART0.TXDATAL = c;
 }
 
-void USART0_init(void)
+static int USART0_printChar(char c, FILE *stream)
+{ 
+    USART0_sendChar(c);
+    return 0; 
+}
+
+static FILE USART_stream = FDEV_SETUP_STREAM(USART0_printChar, NULL, _FDEV_SETUP_WRITE);
+
+static void USART0_init(void)
 {
     PORTA.DIR |= PIN0_bm;
     
