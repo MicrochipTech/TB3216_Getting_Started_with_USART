@@ -25,8 +25,9 @@
     SOFTWARE.
 */
 
-#define USART0_BAUD_RATE(BAUD_RATE) ((float)(3333333.33333 / (2 * (float)BAUD_RATE)) + 0.5)
-#define USART1_BAUD_RATE(BAUD_RATE) ((float)(3333333.33333 / (2 * (float)BAUD_RATE)) + 0.5)
+#define F_CPU 3333333
+#define USART0_BAUD_RATE(BAUD_RATE) ((float)(F_CPU / (2 * (float)BAUD_RATE)) + 0.5)
+#define USART1_BAUD_RATE(BAUD_RATE) ((float)(F_CPU / (2 * (float)BAUD_RATE)) + 0.5)
 
 #include <avr/io.h>
 #include <avr/interrupt.h>
