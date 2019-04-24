@@ -68,12 +68,14 @@ void waitTxReady(void)
     }        
 }
 
-
 status_t waitSendConfirmation(void)
 {
     sendingStatus = SENDING;
     /* Will change inside RXC interrupt handler */
-    while(sendingStatus == SENDING);
+    while(sendingStatus == SENDING)
+    {
+        ;
+    }
     return sendingStatus;
 }
 
