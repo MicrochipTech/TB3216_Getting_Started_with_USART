@@ -1,7 +1,7 @@
 (TB3216) ATmega4809 USART Examples
 ===
 
-This repository contains examples of bare metal source code for USART as described in [Getting Started with USART](http://ww1.microchip.com/downloads/en/DeviceDoc/Getting-Started-with-USART-90003216A.pdf) document from Microchip.
+This repository contains examples of bare metal source code for USART as described in [Getting Started with USART](http://ww1.microchip.com/downloads/en/Appnotes/TB3216-Getting-Started-with-USART-90003216B.pdf) document from Microchip.
 The repository contains an Atmel Studio Solution with multiple projects inside. Make sure you have the necessary tools:
 1. ATmega4809 device (recommended is evaluation board ATmega4809 X-plained PRO)
 2. Atmel Studio
