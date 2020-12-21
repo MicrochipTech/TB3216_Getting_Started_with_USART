@@ -1,6 +1,10 @@
 (TB3216) ATmega4809 USART Examples
 ===
 
+
+**The content of this repository has been moved to [Getting Started with Universal Synchronous and Asynchronous Receiver and Transmitter (USART) Examples (Microchip Studio)](https://github.com/microchip-pic-avr-examples/atmega4809-getting-started-with-usart-studio). Additionally, a repository containing MCC generated code examples for AVR128DA48 with the same functionality can be found at [Getting Started with Universal Synchronous/Asynchronous Receiver/Transmitter (USART) Examples (MPLAB X)](https://github.com/microchip-pic-avr-examples/avr128da48-getting-started-with-usart-mplab-mcc). This repository is obsolete and it will not be maintained.**
+
+
 This repository contains examples of bare metal source code for USART as described in [Getting Started with USART](http://ww1.microchip.com/downloads/en/Appnotes/TB3216-Getting-Started-with-USART-90003216B.pdf) document from Microchip.
 The repository contains an Atmel Studio Solution with multiple projects inside. Make sure you have the necessary tools:
 1. ATmega4809 device (recommended is evaluation board ATmega4809 X-plained PRO)
